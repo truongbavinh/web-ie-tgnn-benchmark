@@ -1,11 +1,3 @@
-# artifacts.yaml  (đặt ở repo root)
-# Liệt kê các artifacts lớn KHÔNG commit vào git. Mỗi mục có:
-# - target_dir: thư mục đích để giải nén/đặt file
-# - type: 'tar' | 'dir' | 'file'
-# - url  (1 file) hoặc urls (nhiều shard)
-# - sha1 hoặc sha1s để kiểm chứng toàn vẹn
-
-artifacts:
 artifacts:
 
   # ===================== HTML ZIPs (10 domains) =====================
