@@ -13,7 +13,7 @@ from sklearn.model_selection import train_test_split
 # Cho phép load Data object
 torch.serialization.add_safe_globals([Data])
 
-# ==== Cấu hình ====
+# ==== Config ====
 GRAPH_DIR = "graph_pt_output"
 MODEL_PATH = "gcn_bert_model.pt"
 CSV_OUTPUT = "gcn_predictions3.csv"
@@ -28,7 +28,7 @@ LABELS = [
 ID2LABEL = {i: l for i, l in enumerate(LABELS)}
 FIELDS = ["name", "price", "material", "color","size"]
 
-# ==== Mô hình TGNN_BERT ====
+# ==== Model TGNN_BERT ====
 class TGNN_BERT(torch.nn.Module):
     def __init__(self, bert_hidden_size=768, hidden_dim=256,
                  num_classes=len(LABELS), num_gcn_layers=2, dropout=0.5):
