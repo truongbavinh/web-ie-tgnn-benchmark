@@ -13,10 +13,10 @@ from torch_geometric.data import Data
 from torch_geometric.nn import GCNConv, BatchNorm
 import torch.serialization
 
-# === Cho phép load file .pt từ PyG ===
+# === allow load file .pt từ PyG ===
 torch.serialization.add_safe_globals([Data])
 
-# ==== Cấu hình cho domain cooking ====
+# ==== config domain ====
 GRAPH_DIR = "graph_pt_output"
 MODEL_PATH = "gcn_bert_model.pt"
 EPOCHS = 100
@@ -39,7 +39,7 @@ random.seed(SEED)
 torch.manual_seed(SEED)
 np.random.seed(SEED)
 
-# ==== Định nghĩa mô hình TGNN_BERT ====
+# ==== Model definition TGNN_BERT ====
 class TGNN_BERT(nn.Module):
     def __init__(self, bert_hidden_size=768, hidden_dim=256,
                  num_classes=len(LABELS), num_gcn_layers=2, dropout=0.5):
@@ -75,12 +75,12 @@ class TGNN_BERT(nn.Module):
 all_files = sorted(glob.glob(os.path.join(GRAPH_DIR, "*.pt")))
 print(f"\n🔍 Tìm thấy {len(all_files)} file .pt trong thư mục: {GRAPH_DIR}")
 if not all_files:
-    print("❌ Không tìm thấy file .pt. Dừng lại.")
+    print("❌ No fnd file .pt. Dừng lại.")
     exit()
 
 # ==== Load dữ liệu từng file .pt (ép float32 để tránh lỗi) ====
 data_list = []
-print("📥 Đang load từng file .pt...")
+print("loading file .pt...")
 for f in tqdm(all_files):
     try:
         data = torch.load(f, weights_only=False)
