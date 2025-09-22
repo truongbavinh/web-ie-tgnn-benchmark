@@ -1,0 +1,22 @@
+domain: course
+required: [title, subject, fees, duration, instructor]
+optional: []
+selectors:
+  coursera.org:
+    title: ['h1','.banner-title']
+    subject: ['.Breadcrumbs .breadcrumb-item', '[class*="subject"]']
+    fees: ['[class*="price"]','[data-test="offer-price"]']
+    duration: ['[class*="duration"]','[class*="hours"]']
+    instructor: ['[class*="instructor"]', '.instructor-name']
+  edx.org:
+    title: ['h1','.course-intro-heading']
+    subject: ['.breadcrumb a','.course-subject']
+    fees: ['[class*="price"]']
+    duration: ['[class*="weeks"]','[class*="hours"]']
+    instructor: ['[class*="instructor"]']
+fallback:
+  title: ['h1','h2']
+  subject: ['[class*="subject"]','.breadcrumb a']
+  fees: ['[class*="price"]']
+  duration: ['[class*="duration"]','[class*="hours"]','[class*="weeks"]']
+  instructor: ['[class*="instructor"]']

@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this repository, please cite it as below."
+title: "Topology-Aware GNN + BERT for Multi-Domain Web Information Extraction"
+authors:
+  - family-names: "YourSurname"
+    given-names: "YourName"
+    affiliation: "Your Institution"
+date-released: 2025-09-22
+version: "1.0.0"
+doi: ""
+preferred-citation:
+  type: article
+  authors:
+    - family-names: "YourSurname"
+      given-names: "YourName"
+  year: 2025
+  title: "Topology-Aware Graph Neural Networks + BERT for Multi-Domain Web Information Extraction"
+  journal: "To appear"

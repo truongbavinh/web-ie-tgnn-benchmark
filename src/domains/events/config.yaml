@@ -1,0 +1,19 @@
+domain: events
+required: [name, venue, date_time, artists]
+optional: []
+selectors:
+  ticketmaster.com:
+    name: ['h1', '[data-automation="event-details-title"]']
+    venue: ['[data-automation="event-details-venue"]', '.venue-name']
+    date_time: ['time', '[class*="date"]']
+    artists: ['[class*="artist"]','[class*="headliner"]','ul li a[href*="artist"]']
+  songkick.com:
+    name: ['h1', '.event-header h1']
+    venue: ['.venue-name', 'a.venue-link']
+    date_time: ['time', '.dateAndName time']
+    artists: ['.line-up a', '.artists a']
+fallback:
+  name: ['h1','h2']
+  venue: ['[class*="venue"]']
+  date_time: ['time','[class*="date"]']
+  artists: ['[class*="artist"] a','ul li a']

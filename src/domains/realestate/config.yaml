@@ -1,0 +1,25 @@
+domain: realestate
+required: [title, location, price, area, bedrooms, bathrooms]
+optional: []
+selectors:
+  zillow.com:
+    title: ['h1', '[data-testid="home-details-summary-headline"]']
+    location: ['[data-testid="home-details-summary-headline"]', '[class*="address"]']
+    price: ['[data-testid="price"]', '[class*="price"]']
+    area: ['[data-testid="living-area"]', '[class*="sqft"]', '[class*="m2"]']
+    bedrooms: ['[data-testid="bed-bath-beyond"]', '[class*="bed"]']
+    bathrooms: ['[data-testid="bed-bath-beyond"]', '[class*="bath"]']
+  rightmove.co.uk:
+    title: ['h1', '.property-header-title']
+    location: ['.property-header-title', '.primaryInfo']
+    price: ['.property-header-price', '.prices']
+    area: ['.floorplanSqFt', '.floorplanSqM']
+    bedrooms: ['.bedrooms', '.key-features li:contains("bedroom")']
+    bathrooms: ['.bathrooms', '.key-features li:contains("bathroom")']
+fallback:
+  title: ['h1','h2']
+  location: ['[class*="address"]','[class*="location"]']
+  price: ['[class*="price"]']
+  area: ['[class*="area"]','[class*="sqft"]','[class*="m2"]']
+  bedrooms: ['[class*="bed"]','li:contains("bed")']
+  bathrooms: ['[class*="bath"]','li:contains("bath")']

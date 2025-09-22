@@ -1,0 +1,33 @@
+# Byte-compiled / cache
+__pycache__/
+*.py[cod]
+*.DS_Store
+
+# Virtual envs
+.venv/
+.env/
+
+# Large artifacts, caches, checkpoints
+checkpoints/
+artifacts/
+*.pt
+*.pth
+*.bin
+*.ckpt
+
+# Baselines raw outputs (CSV)
+baselines/gcn_bert/**/*.csv
+baselines/llm/**/*.csv
+
+# Graph PT tensors / extracted heavy data
+**/graph_pt_output/**
+**/raw_html/**
+**/downloads/**
+
+# Results caches (keep metrics JSON + predictions.jsonl only)
+results/**/tmp/**
+results/**/cache/**
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb

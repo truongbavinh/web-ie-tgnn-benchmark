@@ -1,0 +1,92 @@
+[
+  {
+    "method": "ours",
+    "domain": "app",
+    "f1_slot_micro_mean": 0.9801,
+    "f1_slot_micro_std": 0.003906404996924939,
+    "f1_slot_macro_mean": 0.9801,
+    "f1_slot_macro_std": 0.003906404996924939,
+    "n_runs": 3
+  },
+  {
+    "method": "ours",
+    "domain": "cooking",
+    "f1_slot_micro_mean": 0.9604666666666667,
+    "f1_slot_micro_std": 0.0009392668535736786,
+    "f1_slot_macro_mean": 0.9604666666666667,
+    "f1_slot_macro_std": 0.0009392668535736786,
+    "n_runs": 3
+  },
+  {
+    "method": "ours",
+    "domain": "course",
+    "f1_slot_micro_mean": 0.9735,
+    "f1_slot_micro_std": 0.0015121728296284883,
+    "f1_slot_macro_mean": 0.9735,
+    "f1_slot_macro_std": 0.0015121728296284883,
+    "n_runs": 3
+  },
+  {
+    "method": "ours",
+    "domain": "events",
+    "f1_slot_micro_mean": 0.9818333333333333,
+    "f1_slot_micro_std": 0.0020885933597094507,
+    "f1_slot_macro_mean": 0.9818333333333333,
+    "f1_slot_macro_std": 0.0020885933597094507,
+    "n_runs": 3
+  },
+  {
+    "method": "ours",
+    "domain": "fashion",
+    "f1_slot_micro_mean": 0.9811666666666666,
+    "f1_slot_micro_std": 0.0011145502331534201,
+    "f1_slot_macro_mean": 0.9811666666666666,
+    "f1_slot_macro_std": 0.0011145502331534201,
+    "n_runs": 3
+  },
+  {
+    "method": "ours",
+    "domain": "flights",
+    "f1_slot_micro_mean": 0.9837,
+    "f1_slot_micro_std": 0.0010984838035522893,
+    "f1_slot_macro_mean": 0.9837,
+    "f1_slot_macro_std": 0.0010984838035522893,
+    "n_runs": 3
+  },
+  {
+    "method": "ours",
+    "domain": "hotel",
+    "f1_slot_micro_mean": 0.9737333333333333,
+    "f1_slot_micro_std": 0.0006599663291074128,
+    "f1_slot_macro_mean": 0.9737333333333333,
+    "f1_slot_macro_std": 0.0006599663291074128,
+    "n_runs": 3
+  },
+  {
+    "method": "ours",
+    "domain": "realestate",
+    "f1_slot_micro_mean": 0.9821333333333334,
+    "f1_slot_micro_std": 0.002007209228976601,
+    "f1_slot_macro_mean": 0.9821333333333334,
+    "f1_slot_macro_std": 0.002007209228976601,
+    "n_runs": 3
+  },
+  {
+    "method": "ours",
+    "domain": "scholarships",
+    "f1_slot_micro_mean": 0.9875,
+    "f1_slot_micro_std": 0.0018832595855767546,
+    "f1_slot_macro_mean": 0.9875,
+    "f1_slot_macro_std": 0.0018832595855767546,
+    "n_runs": 3
+  },
+  {
+    "method": "ours",
+    "domain": "tourist",
+    "f1_slot_micro_mean": 0.9863666666666667,
+    "f1_slot_micro_std": 0.0010498677165349287,
+    "f1_slot_macro_mean": 0.9863666666666667,
+    "f1_slot_macro_std": 0.0010498677165349287,
+    "n_runs": 3
+  }
+]

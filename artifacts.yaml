@@ -1,0 +1,87 @@
+# artifacts.yaml  (đặt ở repo root)
+# Liệt kê các artifacts lớn KHÔNG commit vào git. Mỗi mục có:
+# - target_dir: thư mục đích để giải nén/đặt file
+# - type: 'tar' | 'dir' | 'file'
+# - url  (1 file) hoặc urls (nhiều shard)
+# - sha1 hoặc sha1s để kiểm chứng toàn vẹn
+
+artifacts:
+
+  # ====== GCN+BERT (FASHION) ======
+  fashion_graphs_tar:
+    target_dir: baselines/gcn_bert/graph_pt_output
+    type: tar
+    url: https://YOUR_HOST/fashion_graphs_pt.tar.zst
+    sha1: <PUT-SHA1-OF-TAR>
+
+  # Nếu bạn chia nhỏ thành nhiều shard .tar.zst
+  fashion_graphs_shards:
+    target_dir: baselines/gcn_bert/graph_pt_output
+    type: dir
+    urls:
+      - https://YOUR_HOST/fashion_graphs/shard-000.tar.zst
+      - https://YOUR_HOST/fashion_graphs/shard-001.tar.zst
+      # - ...
+    sha1s:
+      - <SHA1-SHARD-000>
+      - <SHA1-SHARD-001>
+      # - ...
+
+  # (Tuỳ chọn) class_weights riêng nếu bạn host ngoài repo
+  fashion_class_weights:
+    target_dir: baselines/gcn_bert
+    type: file
+    url: https://YOUR_HOST/class_weights.pt
+    sha1: <PUT-SHA1-OF-CLASS-WEIGHTS>
+
+  # (Tuỳ chọn) checkpoint GCN, chỉ dùng nếu reviewer muốn chạy tiếp từ checkpoint
+  fashion_gcn_ckpt:
+    target_dir: baselines/gcn_bert
+    type: file
+    url: https://YOUR_HOST/gcn_bert_model.pt
+    sha1: <PUT-SHA1-OF-CKPT>
+
+  # ====== LLM CSV OUTPUTS (FASHION) — nếu bạn không commit CSV ======
+  mistral_csv_fashion:
+    target_dir: baselines/llm
+    type: file
+    url: https://YOUR_HOST/llm_output_fashion3.csv
+    sha1: <PUT-SHA1>
+
+  llama_csv_fashion:
+    target_dir: baselines/llm
+    type: file
+    url: https://YOUR_HOST/llm_llama_fashion3.csv
+    sha1: <PUT-SHA1>
+
+  # ====== SAMPLE nhỏ cho sanity-check (nên có) ======
+  sample_fashion_tar:
+    target_dir: sample/fashion
+    type: tar
+    url: https://YOUR_HOST/sample_fashion.tar.gz   # ~vài MB: 5 trang + graph mini
+    sha1: <PUT-SHA1>
+
+  # ====== PREDICTIONS đã công bố (nếu không commit trực tiếp) ======
+  preds_ours_fashion:
+    target_dir: results/ours
+    type: file
+    url: https://YOUR_HOST/predictions_ours_fashion.jsonl
+    sha1: <PUT-SHA1>
+
+  preds_gcn_bert_fashion:
+    target_dir: results/gcn_bert
+    type: file
+    url: https://YOUR_HOST/predictions_gcn_bert_fashion.jsonl
+    sha1: <PUT-SHA1>
+
+  preds_mistral_fashion:
+    target_dir: results/mistral
+    type: file
+    url: https://YOUR_HOST/predictions_mistral_fashion.jsonl
+    sha1: <PUT-SHA1>
+
+  preds_llama_fashion:
+    target_dir: results/llama
+    type: file
+    url: https://YOUR_HOST/predictions_llama_fashion.jsonl
+    sha1: <PUT-SHA1>

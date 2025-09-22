@@ -1,0 +1,60 @@
+# domains/fashion/config.yaml
+domain: fashion
+required: [name, price]
+optional: [material, color, size]
+
+currency_map:
+  "$": USD
+  usd: USD
+  "€": EUR
+  eur: EUR
+  "£": GBP
+  gbp: GBP
+  "¥": JPY
+  jpy: JPY
+  vnd: VND
+  "₫": VND
+
+price_regex: '(?i)(?:\$|€|£|¥|₫|usd|eur|gbp|jpy|vnd)\s*[0-9][0-9\.,]*'
+number_regex: '(?<![A-Za-z])[0-9]+(?:[\.,][0-9]{1,2})?(?![A-Za-z])'
+
+size_vocab: [XXS, XS, S, M, L, XL, XXL, 2XL, 3XL, 4XL, 32, 34, 36, 38, 40, 42, 44, 46]
+
+sites:
+  zara.com:
+    name: ['h1.product-name', 'h1', '[data-product-name]']
+    price: ['span.price-current', 'span.sale', '[data-price]', '.price__amount', 'span[itemprop=price]']
+    material: ['.composition', '.product-composition', 'li:contains("composition")', 'li:contains("Material")', 'li:contains("fabric")']
+    color: ['.product-color', '.detail-color', 'span.color', '[data-color]']
+    size: ['.size-selector button', '.product-sizes li', 'select#size option']
+  hm.com:
+    name: ['h1', '.product-item-headline']
+    price: ['.price', '.price-value', '[data-price]']
+    material: ['.pdp-product-description-list-item:contains("Composition")', '.material']
+    color: ['.color .value', '.primary-color']
+    size: ['.picker-button', '.product-item-size .item']
+  farfetch.com:
+    name: ['h1', '[data-component="ProductCardTitle"]']
+    price: ['.price', '.priceValue']
+    material: ['li.DetailListItem:contains("Composition")', 'li:contains("Material")']
+    color: ['.Color', 'li:contains("Colour") ._value']
+    size: ['.SizeOption', '.sizeSelector_button__*']
+  flannels.com:
+    name: ['h1', '.productName']
+    price: ['.pri', '.price', '.Price']
+    material: ['li:contains("Fabric")', 'li:contains("Material")']
+    color: ['.swatchValue', '.colourValue']
+    size: ['.size .value', '.sizes button']
+  24s.com:
+    name: ['h1', '.product-title']
+    price: ['.product-price', '.price']
+    material: ['.composition', '.product-details__composition']
+    color: ['.product-color', '.color-label']
+    size: ['.size-selector button', '.sizes__list button']
+
+fallback:
+  name: ['h1', 'h2', 'meta[property="og:title"]', 'meta[name="title"]']
+  price: ['[class*="price"]', '[data-price]']
+  material: ['li:contains("composition")', 'li:contains("material")', 'li:contains("fabric")']
+  color: ['[class*="color"]', '[data-color]']
+  size: ['[class*="size"] option', '[class*="size"] button', '[class*="size"] li']

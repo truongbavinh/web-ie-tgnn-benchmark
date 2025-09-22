@@ -1,0 +1,22 @@
+domain: tourist
+required: [name, location, rating, price, duration]
+optional: []
+selectors:
+  getyourguide.com:
+    name: ['h1', '[data-test-id="activity-title"]']
+    location: ['[data-test-id="activity-start-location"]', '[class*="location"]']
+    rating: ['[data-test-id="rating-summary-value"]', '[class*="rating"]']
+    price: ['[data-test-id="price-component"]', '[class*="price"]']
+    duration: ['[data-test-id="duration"]', '[class*="duration"]']
+  klook.com:
+    name: ['h1', '[class*="ProductTitle"]']
+    location: ['[class*="Location"]']
+    rating: ['[class*="Rating"]']
+    price: ['[class*="Price"]']
+    duration: ['[class*="Duration"]']
+fallback:
+  name: ['h1','h2']
+  location: ['[class*="location"]']
+  rating: ['[class*="rating"]']
+  price: ['[class*="price"]']
+  duration: ['[class*="duration"]','[class*="hour"]']

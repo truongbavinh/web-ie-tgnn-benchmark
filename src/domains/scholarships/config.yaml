@@ -1,0 +1,22 @@
+domain: scholarships
+required: [title, provider, amount, deadline, award]
+optional: []
+selectors:
+  scholarships.com:
+    title: ['h1']
+    provider: ['[class*="provider"]','[class*="sponsor"]']
+    amount: ['[class*="amount"]','[class*="award"]']
+    deadline: ['[class*="deadline"]','time']
+    award: ['[class*="award"]','[class*="benefit"]']
+  bigfuture.collegeboard.org:
+    title: ['h1']
+    provider: ['[class*="provider"]']
+    amount: ['[class*="amount"]']
+    deadline: ['[class*="deadline"]','time']
+    award: ['[class*="award"]']
+fallback:
+  title: ['h1','h2']
+  provider: ['[class*="provider"]','[class*="sponsor"]']
+  amount: ['[class*="amount"]','[class*="award"]']
+  deadline: ['[class*="deadline"]','time']
+  award: ['[class*="award"]','[class*="benefit"]']

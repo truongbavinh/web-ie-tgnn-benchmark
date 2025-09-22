@@ -1,0 +1,9 @@
+{
+  "method": "llama",
+  "domain": "scholarships",
+  "run_id": "randB",
+  "seed": null,
+  "notes": "Imported from user-provided Llama report; no predictions available.",
+  "timestamp": "2025-09-22T03:45:47.698326Z",
+  "commit": null
+}

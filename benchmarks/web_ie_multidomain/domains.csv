@@ -1,0 +1,11 @@
+domain,pages,required_attributes,optional_attributes,notes
+app,apkpure.com|appagg.com|appbrain.com|aptoide.com|cnet.com,name|rating|category|developer|os,,App store pages
+cooking,allrecipes.com|cookingclassy.com|foodnetwork.com|cooking.nytimes.com|tasty.co,name|rating|author|time|type,,Recipe pages
+course,coursera.org|edx.org|udemy.com|skillshare.com|linkedin.com,title|subject|fees|duration|instructor,,Course/bootcamp pages
+events,ticketmaster.com|songkick.com|ra.co|news.pollstar.com|bandsintown.com,name|venue|date_time|artists,,Concerts / events
+fashion,zara.com|hm.com|flannels.com|farfetch.com|24s.com,name|price,material|color|size,E-commerce product pages
+flights,cheapoair.com|farecompare.com|gotogate.com|kayak.com|tripadvisor.com,name|duration|stops|price|departure_time|arrival_time|airline,,Flight search result items
+hotel,trip.com|kayak.com|hotels.com|booking.com|agoda.com,name|location|price|rating|amenities,,Hotel listing pages
+realestate,zillow.com|rightmove.co.uk|realtor.com|realestate.com.au|propertyguru.com.sg,title|location|price|area|bedrooms|bathrooms,,Real estate property pages
+scholarships,scholarships360.org|scholarships.com|mastersportal.com|internationalscholarships.com|bigfuture.collegeboard.org,title|provider|amount|deadline|award,,Scholarship listings
+tourist,getyourguide.com|klook.com|tourradar.com|traveloka.com|viator.com,name|location|rating|price|duration,,Tourist attractions / packages

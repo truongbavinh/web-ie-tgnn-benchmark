@@ -1,0 +1,24 @@
+name: Verify summaries
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+      - name: Install minimal deps
+        run: |
+          python -m pip install --upgrade pip
+          pip install pyyaml
+      - name: Rebuild unified summary
+        run: |
+          python scripts/rebuild_summary.py
+      - name: Show aggregate
+        run: |
+          test -f results/summary/aggregate.csv && tail -n +1 results/summary/aggregate.csv || true

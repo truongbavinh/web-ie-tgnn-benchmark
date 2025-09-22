@@ -1,0 +1,9 @@
+{
+  "method": "llama",
+  "domain": "realestate",
+  "run_id": "seed42",
+  "seed": 42,
+  "notes": "Imported from user-provided Llama report; no predictions available.",
+  "timestamp": "2025-09-22T03:45:47.698326Z",
+  "commit": null
+}

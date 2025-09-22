@@ -1,0 +1,22 @@
+domain: app
+required: [name, rating, category, developer, os]
+optional: []
+selectors:
+  cnet.com:
+    name: ['h1','.c-head']
+    rating: ['[class*="rating"]','[data-rating]']
+    category: ['[class*="category"]','[data-category]']
+    developer: ['[class*="developer"]','.dev-name']
+    os: ['[class*="platform"]','.os']
+  apkpure.com:
+    name: ['h1','.title']
+    rating: ['[itemprop="ratingValue"]','.rating-num']
+    category: ['a[itemprop="genre"]','.category a']
+    developer: ['[itemprop="author"]','.developer a']
+    os: ['[itemprop="operatingSystem"]','.additional li:contains("Requires")']
+fallback:
+  name: ['h1','h2']
+  rating: ['[class*="rating"]','[itemprop="ratingValue"]']
+  category: ['[class*="category"]','a[href*="category"]']
+  developer: ['[class*="developer"]','[itemprop="author"]','[itemprop="publisher"]']
+  os: ['[class*="os"]','[class*="platform"]','[itemprop="operatingSystem"]']

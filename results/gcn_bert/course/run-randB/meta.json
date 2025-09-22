@@ -1,0 +1,9 @@
+{
+  "method": "gcn_bert",
+  "domain": "course",
+  "run_id": "randB",
+  "seed": null,
+  "notes": "Imported from user-provided GCN+BERT report; no predictions available.",
+  "timestamp": "2025-09-22T03:42:44.239675Z",
+  "commit": null
+}

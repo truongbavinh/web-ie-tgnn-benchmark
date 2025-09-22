@@ -1,0 +1,92 @@
+[
+  {
+    "method": "gcn_bert",
+    "domain": "app",
+    "f1_slot_micro_mean": 0.8758666666666667,
+    "f1_slot_micro_std": 0.007793301967430501,
+    "f1_slot_macro_mean": 0.8758666666666667,
+    "f1_slot_macro_std": 0.007793301967430501,
+    "n_runs": 3
+  },
+  {
+    "method": "gcn_bert",
+    "domain": "cooking",
+    "f1_slot_micro_mean": 0.7846666666666667,
+    "f1_slot_micro_std": 0.0028452689777164033,
+    "f1_slot_macro_mean": 0.7846666666666667,
+    "f1_slot_macro_std": 0.0028452689777164033,
+    "n_runs": 3
+  },
+  {
+    "method": "gcn_bert",
+    "domain": "course",
+    "f1_slot_micro_mean": 0.8893666666666666,
+    "f1_slot_micro_std": 0.005833428570651167,
+    "f1_slot_macro_mean": 0.8893666666666666,
+    "f1_slot_macro_std": 0.005833428570651167,
+    "n_runs": 3
+  },
+  {
+    "method": "gcn_bert",
+    "domain": "events",
+    "f1_slot_micro_mean": 0.8709,
+    "f1_slot_micro_std": 0.0031968734726291457,
+    "f1_slot_macro_mean": 0.8709,
+    "f1_slot_macro_std": 0.0031968734726291457,
+    "n_runs": 3
+  },
+  {
+    "method": "gcn_bert",
+    "domain": "fashion",
+    "f1_slot_micro_mean": 0.6639333333333334,
+    "f1_slot_micro_std": 0.011228634031894629,
+    "f1_slot_macro_mean": 0.6639333333333334,
+    "f1_slot_macro_std": 0.011228634031894629,
+    "n_runs": 3
+  },
+  {
+    "method": "gcn_bert",
+    "domain": "flights",
+    "f1_slot_micro_mean": 0.9906333333333333,
+    "f1_slot_micro_std": 0.0010656244908764058,
+    "f1_slot_macro_mean": 0.9906333333333333,
+    "f1_slot_macro_std": 0.0010656244908764058,
+    "n_runs": 3
+  },
+  {
+    "method": "gcn_bert",
+    "domain": "hotel",
+    "f1_slot_micro_mean": 0.8965,
+    "f1_slot_micro_std": 0.0006531972647421995,
+    "f1_slot_macro_mean": 0.8965,
+    "f1_slot_macro_std": 0.0006531972647421995,
+    "n_runs": 3
+  },
+  {
+    "method": "gcn_bert",
+    "domain": "realestate",
+    "f1_slot_micro_mean": 0.9635333333333334,
+    "f1_slot_micro_std": 0.0006018490028422446,
+    "f1_slot_macro_mean": 0.9635333333333334,
+    "f1_slot_macro_std": 0.0006018490028422446,
+    "n_runs": 3
+  },
+  {
+    "method": "gcn_bert",
+    "domain": "scholarships",
+    "f1_slot_micro_mean": 0.9636666666666667,
+    "f1_slot_micro_std": 0.0034451253807211133,
+    "f1_slot_macro_mean": 0.9636666666666667,
+    "f1_slot_macro_std": 0.0034451253807211133,
+    "n_runs": 3
+  },
+  {
+    "method": "gcn_bert",
+    "domain": "tourist",
+    "f1_slot_micro_mean": 0.9566666666666667,
+    "f1_slot_micro_std": 0.0023907228102721125,
+    "f1_slot_macro_mean": 0.9566666666666667,
+    "f1_slot_macro_std": 0.0023907228102721125,
+    "n_runs": 3
+  }
+]

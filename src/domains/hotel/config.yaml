@@ -1,0 +1,30 @@
+domain: hotel
+required: [name, location, price, rating, amenities]
+optional: []
+
+selectors:
+  booking.com:
+    name: ['h2#hp_hotel_name', 'h1', '[data-testid="title"]']
+    location: ['span.hp_address_subtitle', '[data-testid="address"]']
+    price: ['.prco-valign-middle-helper', '[data-testid="price-and-discounted-price"]']
+    rating: ['.b5cd09854e.d10a6220b4', '[data-testid="review-score"]']
+    amenities: ['.hotel-facilities-group', 'ul[data-testid="property-highlights"] li']
+  hotels.com:
+    name: ['h1', '[data-stid="content-hotel-title"]']
+    location: ['[data-stid="content-hotel-lead-address"]', '.address']
+    price: ['[data-stid="price-lockup-details"]', '.current-price']
+    rating: ['[data-stid="content-hotel-reviews-rating"]', '.guest-reviews-badge__rating']
+    amenities: ['.amenities', 'ul.amenity-list li']
+  kayak.com:
+    name: ['h1', '[data-title]']
+    location: ['.m-hotel-overview__sub-title', '.location']
+    price: ['[data-hotel-price]', '.Common-Booking-MultiBookProvider__price'] 
+    rating: ['[data-review-score]', '.rating-score']
+    amenities: ['.amenities', 'ul li']
+
+fallback:
+  name: ['h1','h2','[itemprop="name"]']
+  location: ['[class*="location"]','[itemprop="address"]']
+  price: ['[class*="price"]','[data-price]']
+  rating: ['[class*="rating"]','[data-rating]']
+  amenities: ['[class*="amenit"] li','ul li']

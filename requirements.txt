@@ -1,0 +1,42 @@
+# ==============================
+# Core requirements for the repo
+# ==============================
+# NOTE: Install PyTorch separately to match your CUDA/OS:
+#   https://pytorch.org/get-started/locally/
+# Example (CUDA 12.x):
+#   pip install torch==2.3.1 torchvision==0.18.1 torchaudio==2.3.1 --index-url https://download.pytorch.org/whl/cu121
+#
+# If you use torch-geometric, follow official instructions:
+#   https://pytorch-geometric.readthedocs.io/en/latest/install/installation.html
+#
+# This file includes only library-agnostic deps. After installing torch(+CUDA),
+# you can `pip install -r requirements.txt` safely on any machine.
+
+# --- General utilities ---
+numpy>=1.24
+pandas>=2.0
+scipy>=1.10
+tqdm>=4.66
+pyyaml>=6.0
+jsonlines>=4.0.0
+
+# --- Text / HTML parsing ---
+beautifulsoup4>=4.12
+lxml>=4.9.3
+html5lib>=1.1
+
+# --- ML / NLP tooling (CPU OK; GPU via torch installed separately) ---
+transformers>=4.41
+tokenizers>=0.15
+datasets>=2.19
+scikit-learn>=1.4
+accelerate>=0.30
+
+# --- Optional visualization / logging ---
+matplotlib>=3.7
+rich>=13.7
+
+# --- Dev / lint (optional) ---
+# black>=24.3
+# isort>=5.13
+# flake8>=7.0

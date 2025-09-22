@@ -1,0 +1,92 @@
+[
+  {
+    "method": "mistral",
+    "domain": "app",
+    "f1_slot_micro_mean": 0.8258,
+    "f1_slot_micro_std": 0.011087229891486248,
+    "f1_slot_macro_mean": 0.8258,
+    "f1_slot_macro_std": 0.011087229891486248,
+    "n_runs": 3
+  },
+  {
+    "method": "mistral",
+    "domain": "cooking",
+    "f1_slot_micro_mean": 0.9047666666666667,
+    "f1_slot_micro_std": 0.003402286812653434,
+    "f1_slot_macro_mean": 0.9047666666666667,
+    "f1_slot_macro_std": 0.003402286812653434,
+    "n_runs": 3
+  },
+  {
+    "method": "mistral",
+    "domain": "course",
+    "f1_slot_micro_mean": 0.9455666666666667,
+    "f1_slot_micro_std": 0.0024225789747475226,
+    "f1_slot_macro_mean": 0.9455666666666667,
+    "f1_slot_macro_std": 0.0024225789747475226,
+    "n_runs": 3
+  },
+  {
+    "method": "mistral",
+    "domain": "events",
+    "f1_slot_micro_mean": 0.8866333333333333,
+    "f1_slot_micro_std": 0.0024553795814270412,
+    "f1_slot_macro_mean": 0.8866333333333333,
+    "f1_slot_macro_std": 0.0024553795814270412,
+    "n_runs": 3
+  },
+  {
+    "method": "mistral",
+    "domain": "fashion",
+    "f1_slot_micro_mean": 0.8834000000000001,
+    "f1_slot_micro_std": 0.002084866102814927,
+    "f1_slot_macro_mean": 0.8834000000000001,
+    "f1_slot_macro_std": 0.002084866102814927,
+    "n_runs": 3
+  },
+  {
+    "method": "mistral",
+    "domain": "flights",
+    "f1_slot_micro_mean": 0.8240666666666666,
+    "f1_slot_micro_std": 0.006343675765849211,
+    "f1_slot_macro_mean": 0.8240666666666666,
+    "f1_slot_macro_std": 0.006343675765849211,
+    "n_runs": 3
+  },
+  {
+    "method": "mistral",
+    "domain": "hotel",
+    "f1_slot_micro_mean": 0.8965,
+    "f1_slot_micro_std": 0.0006531972647421995,
+    "f1_slot_macro_mean": 0.8965,
+    "f1_slot_macro_std": 0.0006531972647421995,
+    "n_runs": 3
+  },
+  {
+    "method": "mistral",
+    "domain": "realestate",
+    "f1_slot_micro_mean": 0.8581,
+    "f1_slot_micro_std": 0.01047664068296708,
+    "f1_slot_macro_mean": 0.8581,
+    "f1_slot_macro_std": 0.01047664068296708,
+    "n_runs": 3
+  },
+  {
+    "method": "mistral",
+    "domain": "scholarships",
+    "f1_slot_micro_mean": 0.9655666666666667,
+    "f1_slot_micro_std": 0.0007717224601859812,
+    "f1_slot_macro_mean": 0.9655666666666667,
+    "f1_slot_macro_std": 0.0007717224601859812,
+    "n_runs": 3
+  },
+  {
+    "method": "mistral",
+    "domain": "tourist",
+    "f1_slot_micro_mean": 0.8763333333333334,
+    "f1_slot_micro_std": 0.0033865748019036752,
+    "f1_slot_macro_mean": 0.8763333333333334,
+    "f1_slot_macro_std": 0.0033865748019036752,
+    "n_runs": 3
+  }
+]

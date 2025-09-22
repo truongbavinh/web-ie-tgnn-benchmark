@@ -1,0 +1,12 @@
+{
+  "provided": true,
+  "pages": 1380,
+  "tp": 1278,
+  "fp": 102,
+  "fn": 0,
+  "precision": 0.9261,
+  "recall": 1.0,
+  "f1": 0.9616,
+  "f1_slot_micro": 0.9616,
+  "f1_slot_macro": 0.9616
+}

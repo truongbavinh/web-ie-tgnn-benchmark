@@ -1,0 +1,9 @@
+{
+  "method": "ours",
+  "domain": "hotel",
+  "run_id": "randA",
+  "seed": null,
+  "notes": "Imported from user-provided TGNN report (counts + P/R/F1); no predictions available.",
+  "timestamp": "2025-09-22T03:33:17.787070Z",
+  "commit": null
+}

@@ -1,0 +1,22 @@
+domain: cooking
+required: [name, rating, author, time, type]
+optional: []
+selectors:
+  allrecipes.com:
+    name: ['h1','.article-heading']
+    rating: ['[itemprop="ratingValue"]','[class*="rating"]']
+    author: ['[itemprop="author"]','.author-name']
+    time: ['[itemprop="totalTime"]','[class*="time"]']
+    type: ['[class*="category"]','.breadcrumbs a']
+  foodnetwork.com:
+    name: ['h1','.o-AssetTitle__a-HeadlineText']
+    rating: ['[class*="Rating"]','[itemprop="ratingValue"]']
+    author: ['[class*="author"]','[itemprop="author"]']
+    time: ['[itemprop="totalTime"]','[class*="time"]']
+    type: ['[class*="category"]','.breadcrumbs a']
+fallback:
+  name: ['h1','h2']
+  rating: ['[class*="rating"]','[itemprop="ratingValue"]']
+  author: ['[class*="author"]','[itemprop="author"]']
+  time: ['[class*="time"]','[itemprop="totalTime"]']
+  type: ['[class*="category"]','nav a']

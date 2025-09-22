@@ -1,0 +1,161 @@
+# benchmarks/tasks.yaml
+task_name: web_ie_multidomain
+version: "0.1.0"
+description: >
+  Multi-domain Web Information Extraction benchmark. Each domain defines its own
+  target attributes (slot-filling). Predictions and gold are JSONL with a "domain"
+  field so evaluation can aggregate by domain and globally.
+
+data:
+  format: jsonl
+  id_field: id
+  domain_field: domain
+  gold_path: benchmarks/all_domains/gold.jsonl   # optional: adjust to your layout
+
+# An example line for both gold and predictions
+schema:
+  example: |
+    {
+      "id": "page-0001",
+      "domain": "fashion",
+      "attributes": {
+        "name": "STRIPED SHORTS LIMITED EDITION",
+        "price": { "value": 99.90, "currency": "USD" },
+        "material": ["cotton"],
+        "color": "Ecru / Red",
+        "size": ["XS","S","M","L","XL"]
+      }
+    }
+
+  # Union of all attributes across domains
+  attributes:
+    name:        { type: string }
+    title:       { type: string }
+    location:    { type: string }
+    rating:      { type: number, range: [0, 5] }
+    price:       { type: object, properties: { value: {type: number}, currency: {type: string} } }
+    fees:        { type: object, properties: { value: {type: number}, currency: {type: string} } }
+    amount:      { type: object, properties: { value: {type: number}, currency: {type: string} } }
+    duration:    { type: string }                       # e.g., "3 days", "120 min"
+    time:        { type: string }                       # e.g., "45 min", "1h"
+    area:        { type: object, properties: { value: {type: number}, unit: {type: string} } } # e.g., m2
+    bedrooms:    { type: integer, min: 0 }
+    bathrooms:   { type: integer, min: 0 }
+    amenities:   { type: list,   items: { type: string } }
+    material:    { type: list,   items: { type: string } }
+    color:       { type: string }
+    size:        { type: list,   items: { type: string } }
+    venue:       { type: string }
+    date_time:   { type: string, format: datetime }     # ISO-8601 preferred
+    artists:     { type: list,   items: { type: string } }
+    category:    { type: string }
+    developer:   { type: string }
+    os:          { type: list,   items: { type: string } }
+    subject:     { type: string }
+    instructor:  { type: string }
+    provider:    { type: string }
+    deadline:    { type: string, format: date }         # ISO date preferred
+    award:       { type: string }
+    stops:       { type: integer, min: 0 }
+    departure_time: { type: string, format: datetime }
+    arrival_time:   { type: string, format: datetime }
+    airline:     { type: string }
+
+  normalization:
+    string:
+      case_sensitive: false
+      trim_whitespace: true
+      unicode_nfkc: true
+    list:
+      deduplicate: true
+      trim_whitespace: true
+    price_like:
+      currency_allow: ["USD","EUR","VND","GBP","JPY","KRW","CNY"]
+      numeric_tolerance: 0.01
+
+matching:
+  string_match: exact                  # after normalization
+  list_match: unordered_exact          # set equality for lists
+  allow_missing_fields: false
+
+evaluation:
+  aggregation:
+    by_domain: true
+    macro_by_domain: true
+    micro_global: true
+
+# NOTE: Ensure these metrics are implemented in scripts/metrics.py
+metrics:
+  - name: f1_slot_micro          # micro-F1 over (attribute, value) instances
+  - name: f1_slot_macro          # macro-F1 averaged over attributes
+  - name: exact_match_record     # % records where all required attrs match
+  - name: price_mae              # MAE on price/fees/amount .value when present
+  - name: price_mape             # MAPE on price/fees/amount .value when present
+
+report:
+  primary: ["f1_slot_micro", "exact_match_record"]
+  secondary: ["f1_slot_macro", "price_mae", "price_mape"]
+  slices:
+    - by: domain
+    - by: attribute
+
+domains:
+  list:
+    - name: tourist
+      weight: 1.0
+    - name: hotel
+      weight: 1.0
+    - name: realestate
+      weight: 1.0
+    - name: flights
+      weight: 1.0
+    - name: fashion
+      weight: 1.0
+    - name: events
+      weight: 1.0
+    - name: app
+      weight: 1.0
+    - name: course
+      weight: 1.0
+    - name: scholarships
+      weight: 1.0
+    - name: cooking
+      weight: 1.0
+
+# Domain-specific REQUIRED/OPTIONAL attributes
+domain_overrides:
+  tourist:
+    required_attributes: ["name","location","rating","price","duration"]
+    optional_attributes: []
+  hotel:
+    required_attributes: ["name","location","price","rating","amenities"]
+    optional_attributes: []
+  realestate:
+    required_attributes: ["title","location","price","area","bedrooms","bathrooms"]
+    optional_attributes: []
+  flights:
+    required_attributes: ["name","duration","stops","price","departure_time","arrival_time","airline"]
+    optional_attributes: []
+  fashion:
+    required_attributes: ["name","price"]
+    optional_attributes: ["material","color","size"]
+  events:
+    required_attributes: ["name","venue","date_time","artists"]
+    optional_attributes: []
+  app:
+    required_attributes: ["name","rating","category","developer","os"]
+    optional_attributes: []
+  course:
+    required_attributes: ["title","subject","fees","duration","instructor"]
+    optional_attributes: []
+  scholarships:
+    required_attributes: ["title","provider","amount","deadline","award"]
+    optional_attributes: []
+  cooking:
+    required_attributes: ["name","rating","author","time","type"]
+    optional_attributes: []
+
+submission:
+  predictions_format: jsonl
+  must_include_fields: ["id", "domain", "attributes"]
+  location_hint: "results/<team_or_method>/predictions.jsonl"

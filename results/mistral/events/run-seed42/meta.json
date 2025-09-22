@@ -1,0 +1,9 @@
+{
+  "method": "mistral",
+  "domain": "events",
+  "run_id": "seed42",
+  "seed": 42,
+  "notes": "Imported from user-provided Mistral report; no predictions available.",
+  "timestamp": "2025-09-22T03:50:08.173384Z",
+  "commit": null
+}
