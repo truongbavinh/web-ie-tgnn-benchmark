@@ -234,7 +234,7 @@ If you use this benchmark or code, please cite:
 ```bibtex
 @inproceedings{truongbavinh2025TGNNWebIE,
   title     = {Topology-Aware Graph Neural Networks + BERT for Multi-Domain Web Information Extraction},
-  author    = {Your Name and Coauthors},
+  author    = {Ba-Vinh Truong},
   booktitle = {Proceedings of ...},
   year      = {2025}
 }
