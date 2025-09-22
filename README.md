@@ -218,7 +218,7 @@ Then register and aggregate as shown above.
 If you use this benchmark or code, please cite:
 
 ```bibtex
-@inproceedings{yourkey2025topologywebie,
+@inproceedings{truongbavinh2025TGNNWebIE,
   title     = {Topology-Aware Graph Neural Networks + BERT for Multi-Domain Web Information Extraction},
   author    = {Your Name and Coauthors},
   booktitle = {Proceedings of ...},
@@ -236,7 +236,7 @@ Specify your license (e.g., **MIT**). For any third-party code/models, see their
 
 ## Contact
 
-Questions or issues: open a GitHub Issue or email **youremail@example.com**.
+Questions or issues: open a GitHub Issue or email **tbvinh25nct@hutech.edu.vn**.
 
 ---
 
