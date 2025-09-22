@@ -105,6 +105,16 @@ python scripts/hash_file.py /path/to/file
 ```
 
 ---
+### Raw HTML archives (on Hugging Face)
+
+All 10 domain HTML dumps are hosted on **Hugging Face Datasets**:
+https://huggingface.co/datasets/vinhvinhit/web-ie-raw-html
+
+We reference them via `artifacts.yaml`. Example:
+
+```bash
+# Download and place the Fashion HTML zip under data/html_zips/fashion
+python scripts/download_artifacts.py --config artifacts.yaml --key html_zip_fashion
 
 ## Standard Prediction Format
 
@@ -149,7 +159,11 @@ This avoids duplicated summary folders and collates all methods/domains/runs int
 - `results/summary/aggregate.{csv,json}`
 
 ---
-
+# Download all HTML zips (example: Bash loop)
+for k in html_zip_app html_zip_cooking html_zip_course html_zip_events html_zip_fashion \
+         html_zip_flights html_zip_hotel html_zip_realestate html_zip_scholarships html_zip_tourist; do
+  python scripts/download_artifacts.py --config artifacts.yaml --key $k
+done
 ## Running Baselines
 
 ### GCN+BERT
