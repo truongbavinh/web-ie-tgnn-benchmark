@@ -6,82 +6,65 @@
 # - sha1 hoặc sha1s để kiểm chứng toàn vẹn
 
 artifacts:
+artifacts:
 
-  # ====== GCN+BERT (FASHION) ======
-  fashion_graphs_tar:
-    target_dir: baselines/gcn_bert/graph_pt_output
-    type: tar
-    url: https://YOUR_HOST/fashion_graphs_pt.tar.zst
-    sha1: <PUT-SHA1-OF-TAR>
-
-  # Nếu bạn chia nhỏ thành nhiều shard .tar.zst
-  fashion_graphs_shards:
-    target_dir: baselines/gcn_bert/graph_pt_output
-    type: dir
-    urls:
-      - https://YOUR_HOST/fashion_graphs/shard-000.tar.zst
-      - https://YOUR_HOST/fashion_graphs/shard-001.tar.zst
-      # - ...
-    sha1s:
-      - <SHA1-SHARD-000>
-      - <SHA1-SHARD-001>
-      # - ...
-
-  # (Tuỳ chọn) class_weights riêng nếu bạn host ngoài repo
-  fashion_class_weights:
-    target_dir: baselines/gcn_bert
+  # ===================== HTML ZIPs (10 domains) =====================
+  html_zip_app:
+    target_dir: data/html_zips/app
     type: file
-    url: https://YOUR_HOST/class_weights.pt
-    sha1: <PUT-SHA1-OF-CLASS-WEIGHTS>
+    url: https://huggingface.co/datasets/vinhvinhit/web-ie-raw-html/resolve/main/app_html.zip
+    sha1: cec3e274bde1d898cb38ea717a5afa96628d6e07c2b555e788f23f6bce98097e
 
-  # (Tuỳ chọn) checkpoint GCN, chỉ dùng nếu reviewer muốn chạy tiếp từ checkpoint
-  fashion_gcn_ckpt:
-    target_dir: baselines/gcn_bert
+  html_zip_cooking:
+    target_dir: data/html_zips/cooking
     type: file
-    url: https://YOUR_HOST/gcn_bert_model.pt
-    sha1: <PUT-SHA1-OF-CKPT>
+    url: https://huggingface.co/datasets/vinhvinhit/web-ie-raw-html/resolve/main/cooking_html.zip
+    sha1: 765b7de8268c82f7a6376845ffd13ec1086c8cf36dcb34d1ad813e08883e566c
 
-  # ====== LLM CSV OUTPUTS (FASHION) — nếu bạn không commit CSV ======
-  mistral_csv_fashion:
-    target_dir: baselines/llm
+  html_zip_course:
+    target_dir: data/html_zips/course
     type: file
-    url: https://YOUR_HOST/llm_output_fashion3.csv
-    sha1: <PUT-SHA1>
+    url: https://huggingface.co/datasets/vinhvinhit/web-ie-raw-html/resolve/main/course_html.zip
+    sha1: <SHA1-COURSE>
 
-  llama_csv_fashion:
-    target_dir: baselines/llm
+  html_zip_events:
+    target_dir: data/html_zips/events
     type: file
-    url: https://YOUR_HOST/llm_llama_fashion3.csv
-    sha1: <PUT-SHA1>
+    url: https://huggingface.co/datasets/vinhvinhit/web-ie-raw-html/resolve/main/events_html.zip
+    sha1: <SHA1-EVENTS>
 
-  # ====== SAMPLE nhỏ cho sanity-check (nên có) ======
-  sample_fashion_tar:
-    target_dir: sample/fashion
-    type: tar
-    url: https://YOUR_HOST/sample_fashion.tar.gz   # ~vài MB: 5 trang + graph mini
-    sha1: <PUT-SHA1>
-
-  # ====== PREDICTIONS đã công bố (nếu không commit trực tiếp) ======
-  preds_ours_fashion:
-    target_dir: results/ours
+  html_zip_fashion:
+    target_dir: data/html_zips/fashion
     type: file
-    url: https://YOUR_HOST/predictions_ours_fashion.jsonl
-    sha1: <PUT-SHA1>
+    url: https://huggingface.co/datasets/vinhvinhit/web-ie-raw-html/resolve/main/fashion_html.zip
+    sha1: 84e1a7bf6ab11faa497927381b08ae862b6c4e98cf22c866e4b46df5d4c2f1c1
 
-  preds_gcn_bert_fashion:
-    target_dir: results/gcn_bert
+  html_zip_flights:
+    target_dir: data/html_zips/flights
     type: file
-    url: https://YOUR_HOST/predictions_gcn_bert_fashion.jsonl
-    sha1: <PUT-SHA1>
+    url: https://huggingface.co/datasets/vinhvinhit/web-ie-raw-html/resolve/main/flights_html.zip
+    sha1: <SHA1-FLIGHTS>
 
-  preds_mistral_fashion:
-    target_dir: results/mistral
+  html_zip_hotel:
+    target_dir: data/html_zips/hotel
     type: file
-    url: https://YOUR_HOST/predictions_mistral_fashion.jsonl
-    sha1: <PUT-SHA1>
+    url: https://huggingface.co/datasets/vinhvinhit/web-ie-raw-html/resolve/main/hotel_html.zip
+    sha1: <SHA1-HOTEL>
 
-  preds_llama_fashion:
-    target_dir: results/llama
+  html_zip_realestate:
+    target_dir: data/html_zips/realestate
     type: file
-    url: https://YOUR_HOST/predictions_llama_fashion.jsonl
-    sha1: <PUT-SHA1>
+    url: https://huggingface.co/datasets/vinhvinhit/web-ie-raw-html/resolve/main/realestate_html.zip
+    sha1: <SHA1-REALESTATE>
+
+  html_zip_scholarships:
+    target_dir: data/html_zips/scholarships
+    type: file
+    url: https://huggingface.co/datasets/vinhvinhit/web-ie-raw-html/resolve/main/scholarships_html.zip
+    sha1: <SHA1-SCHOLARSHIPS>
+
+  html_zip_tourist:
+    target_dir: data/html_zips/tourist
+    type: file
+    url: https://huggingface.co/datasets/vinhvinhit/web-ie-raw-html/resolve/main/tourist_html.zip
+    sha1: <SHA1-TOURIST>
