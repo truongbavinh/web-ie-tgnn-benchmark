@@ -135,9 +135,8 @@ All methods produce `predictions.jsonl`, one JSON object per page:
 - Monetary fields (`price`, `fees`, `amount`) → `{value, currency}` when parsable.
 - List-like fields (`material`, `size`, `artists`, `amenities`) may be arrays.
 - If your output is CSV, use **`baselines/adapters/csv_to_predictions.py`** (or `src/exporters/`) to convert to this format.
-
+- datasets/ — README + local layout (HTML zips fetched from HF), ground-truth JSON (per site)
 ---
-datasets/ — README + local layout (HTML zips fetched from HF), ground-truth JSON (per site)
 
 ## Quick Verification (no training required)
 
