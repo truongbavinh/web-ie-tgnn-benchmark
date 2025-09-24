@@ -93,14 +93,16 @@ artifacts:
 ## 4) Domains
 
 For SWDE we host 8 domains (10 sites each):
-- **auto** — model, price, engine, fuel  
-- **book** — title, author, isbn13, pub, date  
-- **camera** — model, price, manufacturer  
-- **job** — title, company, location, date  
-- **movie** — title, director, genre, mpaa  
-- **nbaplayer** — name, team, height, weight  
-- **restaurant** — name, address, phone, cuisine  
-- **university** — name, phone, website, type  
+- **app** — name, rating, category, developer, os
+- **cooking** — name, rating, author, time, type
+- **course** — title, subject, fees, duration, instructor 
+- **events** — name, venue, date_time, artists 
+- **fashion** — name, price, material, color, size
+- **flights** — name, duration, stops, price, departure_time, arrival_time, airline
+- **hotel** — name, location, price, rating, amenities 
+- **realestate** — title, location, price, area, bedrooms, bathrooms
+- **scholarships** — title, provider, amount, deadline, award
+- **tourist** — name, location, rating, price, duration
 
 Check `benchmarks/web_ie_multidomain/<domain>/README.md` and `schema.md` for domain-specific notes.
 
