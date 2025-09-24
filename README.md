@@ -34,7 +34,9 @@ repo-root/
 │  ├─ gcn_bert/                      # GCN+BERT wrappers & user scripts
 │  ├─ llm/                           # Llama & Mistral extraction wrappers
 │  └─ adapters/                      # CSV → predictions.jsonl converters
-│
+├─ dataset/
+├  ├─ ground_truth
+├  └─ raw_html_zips
 ├─ results/
 │  ├─ ours/                          # TGNN (seed42, randA, randB)
 │  ├─ gcn_bert/                      # baseline 1
@@ -135,6 +137,7 @@ All methods produce `predictions.jsonl`, one JSON object per page:
 - If your output is CSV, use **`baselines/adapters/csv_to_predictions.py`** (or `src/exporters/`) to convert to this format.
 
 ---
+datasets/ — README + local layout (HTML zips fetched from HF), ground-truth JSON (per site)
 
 ## Quick Verification (no training required)
 
