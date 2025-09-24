@@ -43,7 +43,7 @@ You can download each domain’s zip via our helper script or the Hugging Face C
 
 ### A) Python helper (recommended)
 ```bash
-# Example: SWDE auto
+# Example: app
 python scripts/fetch_html_from_hf.py   --repo-id vinhvinhit/web-ie-raw-html   --path-in-repo swde/app.zip   --out datasets/raw_html_zips/app.zip
 ```
 Repeat for other domains by changing `--path-in-repo` and `--out`.
