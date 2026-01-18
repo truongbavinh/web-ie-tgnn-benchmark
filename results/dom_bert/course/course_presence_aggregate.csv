@@ -1,0 +1,2 @@
+domain,seeds,mean_title,mean_subject,mean_fees,mean_duration,mean_instructor,mean_all5,std_title,std_subject,std_fees,std_duration,std_instructor,std_all5,note
+Course,"42,43,44",99.21,90.58,71.14,95.26,98.40,59.69,0.05,0.83,0.94,0.09,0.04,1.38,Presence on test files with gold; TITLE/SUBJECT/FEES/DURATION/INSTRUCTOR + ALL5
