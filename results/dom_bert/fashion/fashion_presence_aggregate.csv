@@ -1,0 +1,2 @@
+domain,seeds,mean_name,mean_price,mean_material,mean_color,mean_size,mean_all5,std_name,std_price,std_material,std_color,std_size,std_all5,note
+Fashion,"42,43,44",99.95,98.01,84.57,99.45,76.62,62.91,0.01,0.05,0.19,0.07,0.13,0.15,Presence on test files with gold; NAME/PRICE/MATERIAL/COLOR/SIZE + ALL5
