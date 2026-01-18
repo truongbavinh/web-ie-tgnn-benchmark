@@ -1,0 +1,4 @@
+seed,mean_name_presence,mean_rating_presence,mean_author_presence,mean_time_presence,mean_type_presence,mean_all5_presence
+42,100.00,68.25,90.36,75.09,94.51,57.64
+43,100.00,69.42,89.73,78.92,94.18,56.64
+44,100.00,69.16,89.08,76.34,98.73,61.39

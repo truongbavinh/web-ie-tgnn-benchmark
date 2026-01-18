@@ -1,0 +1,2 @@
+domain,seeds,mean_name,mean_rating,mean_author,mean_time,mean_type,mean_all5,std_name,std_rating,std_author,std_time,std_type,std_all5,note
+Cooking,"42,43,44",100.00,68.94,89.72,76.78,95.81,58.56,0.00,0.50,0.52,1.59,2.07,2.04,Presence on test files with gold; NAME/RATING/AUTHOR/TIME/TYPE + ALL5
