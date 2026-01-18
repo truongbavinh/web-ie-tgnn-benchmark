@@ -1,0 +1,2 @@
+domain,seeds,mean_name,mean_location,mean_price,mean_rating,mean_amenities,mean_all5,std_name,std_location,std_price,std_rating,std_amenities,std_all5,note
+Hotel,"42,43,44",99.98,99.84,51.66,95.40,99.53,47.56,0.01,0.12,0.25,0.17,0.12,0.38,Presence on test files with gold; NAME/LOCATION/PRICE/RATING/AMENITIES + ALL5
