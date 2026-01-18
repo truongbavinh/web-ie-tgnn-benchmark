@@ -1,0 +1,2 @@
+domain,seeds,mean_name,mean_duration,mean_stops,mean_price,mean_departure_time,mean_arrival_time,mean_airline,mean_all7,std_name,std_duration,std_stops,std_price,std_departure_time,std_arrival_time,std_airline,std_all7,note
+Flight,"42,43,44",95.36,100.00,99.98,98.21,100.00,88.78,99.98,85.87,0.77,0.00,0.03,0.30,0.00,0.47,0.03,0.26,Presence on test files with gold; NAME/DURATION/STOPS/PRICE/DEPARTURE_TIME/ARRIVAL_TIME/AIRLINE + ALL7

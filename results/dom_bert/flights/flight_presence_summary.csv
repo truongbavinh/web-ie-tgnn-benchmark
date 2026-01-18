@@ -1,0 +1,4 @@
+seed,mean_name_presence,mean_duration_presence,mean_stops_presence,mean_price_presence,mean_departure_time_presence,mean_arrival_time_presence,mean_airline_presence,mean_all7_presence
+42,96.44,100.00,99.94,97.82,100.00,89.39,99.94,86.14
+43,94.76,100.00,100.00,98.56,100.00,88.70,100.00,85.96
+44,94.88,100.00,100.00,98.25,100.00,88.26,100.00,85.52
