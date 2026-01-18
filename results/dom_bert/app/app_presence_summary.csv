@@ -1,0 +1,4 @@
+seed,mean_name_presence,mean_rating_presence,mean_category_presence,mean_developer_presence,mean_os_presence,mean_all5_presence
+42,100.00,88.23,100.00,99.52,99.85,87.60
+43,99.91,88.57,100.00,99.37,99.91,87.76
+44,99.94,87.85,100.00,99.64,99.91,87.34
