@@ -1,0 +1,2 @@
+domain,seeds,mean_title,mean_location,mean_price,mean_area,mean_bedrooms,mean_bathrooms,mean_all6,std_title,std_location,std_price,std_area,std_bedrooms,std_bathrooms,std_all6,note
+RealEstate,"42,43,44",96.47,99.11,99.86,97.75,98.08,95.82,88.08,0.21,0.11,0.04,0.16,0.15,0.18,0.21,Presence on test files with gold; TITLE/LOCATION/PRICE/AREA/BEDROOMS/BATHROOMS + ALL6
