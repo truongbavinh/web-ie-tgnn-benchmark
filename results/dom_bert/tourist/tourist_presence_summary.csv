@@ -1,0 +1,4 @@
+seed,mean_name_presence,mean_location_presence,mean_rating_presence,mean_price_presence,mean_duration_presence,mean_all5_presence
+42,99.97,79.56,94.91,99.93,87.90,64.15
+43,100.00,79.18,94.84,99.97,86.98,62.49
+44,100.00,79.78,94.71,100.00,87.51,63.75

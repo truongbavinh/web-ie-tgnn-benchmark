@@ -1,0 +1,2 @@
+domain,seeds,mean_name,mean_location,mean_rating,mean_price,mean_duration,mean_all5,std_name,std_location,std_rating,std_price,std_duration,std_all5,note
+Tourist,"42,43,44",99.99,79.51,94.82,99.97,87.46,63.46,0.01,0.25,0.08,0.03,0.38,0.71,Presence on test files with gold; NAME/LOCATION/RATING/PRICE/DURATION + ALL5
