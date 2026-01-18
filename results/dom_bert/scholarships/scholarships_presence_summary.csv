@@ -1,0 +1,4 @@
+seed,mean_title_presence,mean_provider_presence,mean_amount_presence,mean_deadline_presence,mean_award_presence,mean_all5_presence
+42,100.00,80.42,98.61,98.68,82.43,61.00
+43,100.00,79.91,98.74,98.84,82.62,61.02
+44,100.00,79.27,98.28,99.07,81.79,59.04

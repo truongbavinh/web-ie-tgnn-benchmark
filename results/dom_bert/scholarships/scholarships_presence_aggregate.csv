@@ -1,0 +1,2 @@
+domain,seeds,mean_title,mean_provider,mean_amount,mean_deadline,mean_award,mean_all5,std_title,std_provider,std_amount,std_deadline,std_award,std_all5,note
+Scholarships,"42,43,44",100.00,79.87,98.54,98.86,82.28,60.35,0.00,0.47,0.19,0.16,0.36,0.93,Presence on test files with gold; TITLE/PROVIDER/AMOUNT/DEADLINE/AWARD + ALL5
