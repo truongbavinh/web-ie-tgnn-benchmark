@@ -1,5 +1,5 @@
 # Topology-Aware Web Information Extraction (Multi-Domain Benchmark)
-> Authors: Ba-Vinh Truong, Phu Pham, Loan T.T. Nguyen.<br>
+> Authors: Ba-Vinh Truong, Phu Pham, Loan T.T. Nguyen.<br><br>
 > This repository accompanies our paper on **topology-aware GNN + BERT (TGNN)** for multi-domain Web Information Extraction (IE).  
 It contains: a standardized **benchmark**, **our TGNN method**, **baselines** (GCN+BERT, Llama-3.1-8B-Instruct, Mistral-7B-Instruct-v0.2), and complete **reproducibility artifacts** (metrics and optional predictions).
 
