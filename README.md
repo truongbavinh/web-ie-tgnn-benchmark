@@ -1,5 +1,4 @@
 # Topology-Aware Web Information Extraction (Multi-Domain Benchmark)
-> **TGNN–BERT: A NOVEL APPROACH OF INTEGRATING TOPOLOGICAL GRAPH NEURAL NETWORKS AND TRANSFORMER FOR WEB INFORMATION EXTRACTION**  
 > Authors: Ba-Vinh Truong, Phu Pham, Loan T.T. Nguyen.
 This repository accompanies our paper on **topology-aware GNN + BERT (TGNN)** for multi-domain Web Information Extraction (IE).  
 It contains: a standardized **benchmark**, **our TGNN method**, **baselines** (GCN+BERT, Llama-3.1-8B-Instruct, Mistral-7B-Instruct-v0.2), and complete **reproducibility artifacts** (metrics and optional predictions).
